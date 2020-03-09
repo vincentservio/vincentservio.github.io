@@ -12,7 +12,9 @@ items. I chose to do my something involving my favorite game of all time, NBA 2K
 was fairly easy to get started, however due to an inconsistent internet connection I had no
 choice but to start my own local environment. Transferring from an IDE to a local environment
 had many complications. I had no idea whether I was using it correctly because I had never
-used a local environment prior to this.
+used a local environment prior to this
+
+
 After building my CLI and having fake information pass through, I felt accomplished
 having a working CLI and working local environment. But it was time for me to fill it with actual
 data. It took a bit of trial and error to get Pry, Nokogiri, and Uri started. Mainly because it was
@@ -27,6 +29,8 @@ Besides all of that, I only had a little bit of time left to turn it in, and I d
 time to rewrite my entire code. I took the remaining time to make my CLI more user friendly.
 Because I feel a lot of the wording was jumbled and spacing made a big difference for the user
 experience.
+
+
 I worked on this project with another student at a WeWork, however he built his CLI using
 an API. So we weren’t much help to each others particular projects, but it definitely helped
 when finding bugs in the each others applications while testing.
