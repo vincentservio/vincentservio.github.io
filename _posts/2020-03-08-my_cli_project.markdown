@@ -30,6 +30,77 @@ time to rewrite my entire code. I took the remaining time to make my CLI more us
 Because I feel a lot of the wording was jumbled and spacing made a big difference for the user
 experience.
 
+## My Biggest problems
+I had problems with Instance variables/methods and Class variables/methods. I believe my problem began with simply not understanding the definition and difference between the two. A Class method is a method that is called on a class while instance methods are called on a classes instance. For example:
+
+```
+
+class Nba2kMe::Player
+
+      def self.all 
+         @@all
+ 
+       end
+ end 
+
+```
+ My .all method is a class method because it made the class function and does not respond to an individual instance of a class. Normally Class methods are initiated with a "self." keyword.  Self represents  
+the class so it made it easier to remember how to classify a class method vs. an instance method.  Another major difference is how the methods are called. This class method would be called like this : 
+
+```
+Nba2kMe::Playerr.all 
+```
+
+Virtually its the same as what we defined earlier which is self.all ((Nba2kMe::Scraper).all). This would return all of the players stored in the @@all array.   So if we tried to call an instance the same way. we would get a NoMethodError. Lets take a look at why 
+
+
+```
+
+    def list_players
+        puts "#########################################"
+        puts "### Select the best to beat the best! ###"
+        puts "#########################################"
+        # @players = Nba2kMe::Player.all
+        # @players.each.with_index(1) do |player, x|
+            # if x == 1 
+            puts "All Around"
+            # elsif x == 2
+            puts "Shooter"
+            # elsif x == 3
+            puts "Slasher"
+            # elsif x == 4
+            puts "Point Guard"
+            # elsif x == 5
+            puts "Shooting Guard"
+            # elsif x == 6
+            puts "Small Forward"
+            # elsif x == 7
+            puts "Power Foward"
+            # elsif x == 8
+            puts "Center"  
+end
+
+```
+
+My interface is constructed by instance method. Because an instance method works with an instace rather than a class, a new instance would have to be created before you can use this method. 
+
+
+
+```
+Menu = Nba2kMe::CLI.new.menu
+```
+
+
+This is another major difference between the two methods. If a class method is called this way than it will give you the same NOMETHODERROR. 
+
+Fortunetly Instance/Class Variables are a little easier to understand. Class variables starts with a @@ symbol and Instance variables start with @ symbols. Simple enough, however they do different things. Class variables co exist with class instances. While instance variables are exclusive to the class.
+
+```
+@@class_variable 
+@instance_variable 
+
+```
+
 
 I worked on this project with another student at a WeWork, however he built his CLI using
 an API. So we weren’t much help to each others particular projects, but it definitely helped
