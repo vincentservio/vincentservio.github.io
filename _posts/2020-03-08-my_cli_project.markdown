@@ -82,7 +82,7 @@ end
 
 ```
 
-My interface is constructed by instance method. Because an instance method works with an instace rather than a class, a new instance would have to be created before you can use this method. 
+My interface is constructed by instance method. Because an instance method works with an instance rather than a class, a new instance would have to be created before you can use this method. 
 
 
 
@@ -93,13 +93,20 @@ Menu = Nba2kMe::CLI.new.menu
 
 This is another major difference between the two methods. If a class method is called this way than it will give you the same NOMETHODERROR. 
 
-Fortunetly Instance/Class Variables are a little easier to understand. Class variables starts with a @@ symbol and Instance variables start with @ symbols. Simple enough, however they do different things. Class variables co exist with class instances. While instance variables are exclusive to the class.
+Fortunately Instance/Class Variables are a little easier to understand. Class variables are identified with a
+@@ symbol. They co exist with class instances. And can be accessed through an instance or a class itself.
+Instance variables start with a single @ symbol. They can be accessed directly by calling a variable name
+inside the class. Instance variables are exclusive to the class. Simple enough, however they do different
+things.
 
 ```
 @@class_variable 
 @instance_variable 
 
 ```
+
+
+
 
 
 I worked on this project with another student at a WeWork, however he built his CLI using
