@@ -93,16 +93,81 @@ Menu = Nba2kMe::CLI.new.menu
 
 This is another major difference between the two methods. If a class method is called this way than it will give you the same NOMETHODERROR. 
 
-Fortunately Instance/Class Variables are a little easier to understand. Class variables are identified with a
-@@ symbol. Class variables are available to the entire class, and can only be called on a class. Class variables are also shared between classes.
-
-Instance variables start with a single @ symbol .Instance variables are available to an instance of a class, and are not available outside the method they're defined in. Instance variables only belong to one class . 
+I struggled writing the definitions of the varibles, but i boiled it down to this.
 
 ```
 @@class_variable 
 @instance_variable 
 
 ```
+
+
+Class variables are identified with @@ symbols.The Scope of a Class variable is the entire class. We can access our class variables anywhere in our class: in both class and instance methods. 
+
+```
+class Student
+
+@@student_count  = 0
+ 
+       def initialize 
+			 @@student_count +=1 
+			 end 
+
+      def self.count
+      @@student_count
+
+      end
+end
+
+
+Student.new 
+Student.new 
+Student.new 
+Student.count 
+
+        # => 3
+
+
+
+```
+
+Class variables store data having to do with the entire class .You could also say class variables are shared between classes, while instance variables only belong to one class
+
+
+
+
+
+Instance variables can be read  with a single @ symbol. The scope of an instance variable is the instance itself.  Instance variables are used to instatiate each instance .  For example 
+```
+Class Students 
+
+      def setname (string)
+			@name = (string)
+			end 
+			
+			def introduce
+			puts "hi my name is #{name}
+			end 
+end
+			
+			alvin = Students.new
+			alvin.setName("alvin")
+			alvin.introduce #=> "hi my name is alvin"
+			
+				theodore = Students.new
+			theodore .setName("theodore")
+			theodore .introduce #=> "hi my name is theodore "
+			
+					simon = Students.new
+			simon .setname("simon")
+			simon .introduce #=> "hi my name is simon "
+			
+	
+
+```
+
+Each instance would have their own copy of data specific to the object of a class.  Instance variables can be accessed within the class it was created in , and are not available outside the class. attr_accsessor can be helpful when creating an instance variable.  
+
 
 
 
