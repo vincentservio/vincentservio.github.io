@@ -94,10 +94,9 @@ Menu = Nba2kMe::CLI.new.menu
 This is another major difference between the two methods. If a class method is called this way than it will give you the same NOMETHODERROR. 
 
 Fortunately Instance/Class Variables are a little easier to understand. Class variables are identified with a
-@@ symbol. They co exist with class instances. And can be accessed through an instance or a class itself.
-Instance variables start with a single @ symbol. They can be accessed directly by calling a variable name
-inside the class. Instance variables are exclusive to the class. Simple enough, however they do different
-things.
+@@ symbol. Class variables are available to the entire class, and can only be called on a class. Class variables are also shared between classes.
+
+Instance variables start with a single @ symbol .Instance variables are available to an instance of a class, and are not available outside the method they're defined in. Instance variables only belong to one class . 
 
 ```
 @@class_variable 
