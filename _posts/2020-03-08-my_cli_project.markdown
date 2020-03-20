@@ -110,14 +110,14 @@ class Student
 
 @@student_count  = 0
  
-   def initialize 
-			 @@student_count +=1 
-			 end 
+ def initialize 
+ @@student_count +=1 
+end 
 
-      def self.count
-      @@student_count
+def self.count
+@@student_count
 
-      end
+end
 end
 
 
@@ -144,12 +144,12 @@ class Students
 #instance method 
 
 def setname (string) 
-			@name = string
-			end 
+@name = string
+end 
 			
-			def introduce
-			puts "hi my name is #{@name}
-			end 
+def introduce
+puts "hi my name is #{@name}
+end 
 end
 			
 			alvin = Students.new
