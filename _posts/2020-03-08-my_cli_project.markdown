@@ -106,7 +106,7 @@ Class variables are identified with @@ symbols.The Scope of a Class variable is 
 
 ```
 class Student
-#class variavle
+#class variable
 
 @@student_count  = 0
  
