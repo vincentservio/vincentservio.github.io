@@ -168,7 +168,7 @@ end
 
 ```
 
-Each instance would have their own variables of data, specific to the instance of the parent class .  Instance variables can be accessed within the instance it was created in , and are not available outside the instance. attr_accsessor can be helpful to read and write instance variables.  
+Each instance would have their own variables of data, specific to the instance of the parent class .  Instance variables can only be accessed inside intance methods , and are not available outside the instance. In other words, a instance variable is defined inside a class and not avaliable outside the class it was created in. attr_accsessor can be helpful to read and write instance variables.  
 
 
 
