@@ -93,7 +93,7 @@ Menu = Nba2kMe::CLI.new.menu
 
 This is another major difference between the two methods. If a class method is called this way than it will give you the same NOMETHODERROR. 
 
-I struggled writing the definitions of the varibles, but i boiled it down to this.
+I struggled writing the definitions of the variables, but i boiled it down to this.
 
 ```
 @@class_variable 
@@ -106,10 +106,11 @@ Class variables are identified with @@ symbols.The Scope of a Class variable is 
 
 ```
 class Student
+#class variavle
 
 @@student_count  = 0
  
-       def initialize 
+   def initialize 
 			 @@student_count +=1 
 			 end 
 
@@ -131,22 +132,23 @@ Student.count
 
 ```
 
-Class variables store data having to do with the entire class .You could also say class variables are shared between classes, while instance variables only belong to one class
+Class variables store data having to do with the entire class .
 
 
 
 
-
-Instance variables can be read  with a single @ symbol. The scope of an instance variable is the instance itself.  Instance variables are used to instatiate each instance .  For example 
+Instance variables can be read  with a single @ symbol. The scope of an instance variable is the instance itself.  Instance variables are often used to store object instances attributes   .  For example 
 ```
-Class Students 
+class Students 
 
-      def setname (string)
-			@name = (string)
+#instance method 
+
+def setname (string) 
+			@name = string
 			end 
 			
 			def introduce
-			puts "hi my name is #{name}
+			puts "hi my name is #{@name}
 			end 
 end
 			
@@ -166,7 +168,7 @@ end
 
 ```
 
-Each instance would have their own copy of data specific to the object of a class.  Instance variables can be accessed within the class it was created in , and are not available outside the class. attr_accsessor can be helpful when creating an instance variable.  
+Each instance would have their own variables of data, specific to the instance of the parent class .  Instance variables can be accessed within the instance it was created in , and are not available outside the instance. attr_accsessor can be helpful to read and write instance variables.  
 
 
 
