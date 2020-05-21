@@ -20,7 +20,8 @@ For my rails project I decided to build an app called “Talk Show”. Talk Show
         get :most_comments
       end 
     end
+		```
 
-Collection is an instance public method. It helps Rails to recognize paths such as /TvShows/search with GET, and route to the search action of TvShowsController. It will also create route helpers. I assumed that because I would be adding a search feature that it would be easiest to operate on a collection for future updates. Collection routes are established for actions performed on a collection of the resource (in my case tv_shows). In reference to my app it would be performed on a collection of show titles. I honestly did not need Collection to make my app operational, I could have created a custom route and rendered it on the index page. But my current order does help make future changes more organized and easier. 
+Collection routes act on and display a collection of objects in a resource. Collection routes are used for functions/features like search. A  form would noramlly default to a post method rather than a GET. Collection  helps Rails to recognize paths such as /TvShows/search  as a GET request,  and route to the search action of TvShowsController. It will also create route helpers, and all of the restFul routes(new,show,edit, update & destroy). I assumed that because I would be adding a search feature that it would be easiest to operate on a collection for future updates. Collection routes are established for actions performed on a collection of the resource (in my case tv_shows). In reference to my app it would be performed on a collection of show titles. I honestly did not need Collection to make my app operational, I could have created a custom route and rendered it on the index page. But my current order does help make future changes more organized and easier. 
 
 
