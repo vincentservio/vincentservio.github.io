@@ -16,7 +16,7 @@ the user.
 I had tons of fun working with React Components. With a really strong grasp of javascript, React felt like a
 seamless transition. One thing that I did struggle with was knowing when to use a functional component
 vs class components. Class components can be used in every component and function properly. In fact if
-one is unsure on which container to use, it is a good idea to start off with a class component. However
+one is unsure on which component to use, it is a good idea to start off with a class component. However
 functional components do not go through a series of checks related to its lifecycle. In result if we do not
 need state or lifecycle methods, we can just use a Functional component. Functional components return
 JSX, unlike a class container which uses render. Functional components do not extend component so it
